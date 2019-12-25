@@ -6,9 +6,17 @@ import model.declarator.RowDeclarator;
 
 public class RowDeclaratorCollection  implements DeclaratorCollection{
 
-	List<RowDeclarator> declarators;
+	private List<RowDeclarator> declarators;
 	
 	public RowDeclaratorCollection(List<RowDeclarator> declarators) {
+		this.declarators = declarators;
+	}
+
+	public List<RowDeclarator> getDeclarators() {
+		return declarators;
+	}
+
+	public void setDeclarators(List<RowDeclarator> declarators) {
 		this.declarators = declarators;
 	}
 	

@@ -11,5 +11,13 @@ public class DeclaratorItem {
 	public DeclaratorItem(List<GridItem> gridItems) {
 		declaratorObject.addAll(gridItems);
 	}
+
+	public List<GridItem> getDeclaratorObject() {
+		return declaratorObject;
+	}
+
+	public void setDeclaratorObject(List<GridItem> declaratorObject) {
+		this.declaratorObject = declaratorObject;
+	}
 	
 }

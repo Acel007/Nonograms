@@ -9,5 +9,13 @@ public class ColumnDeclarator {
 	public ColumnDeclarator() {
 		
 	}
+
+	public List<DeclaratorItem> getDeclaratorItems() {
+		return declaratorItems;
+	}
+
+	public void setDeclaratorItems(List<DeclaratorItem> declaratorItems) {
+		this.declaratorItems = declaratorItems;
+	}
 	
 }

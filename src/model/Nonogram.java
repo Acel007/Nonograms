@@ -16,4 +16,28 @@ public class Nonogram {
 		this.columnDeclarators = columnDeclarators;
 	}
 
+	public PictureGrid getNonogramPicture() {
+		return nonogramPicture;
+	}
+
+	public void setNonogramPicture(PictureGrid nonogramPicture) {
+		this.nonogramPicture = nonogramPicture;
+	}
+
+	public RowDeclaratorCollection getRowDeclarators() {
+		return rowDeclarators;
+	}
+
+	public void setRowDeclarators(RowDeclaratorCollection rowDeclarators) {
+		this.rowDeclarators = rowDeclarators;
+	}
+
+	public ColumnDeclaratorCollection getColumnDeclarators() {
+		return columnDeclarators;
+	}
+
+	public void setColumnDeclarators(ColumnDeclaratorCollection columnDeclarators) {
+		this.columnDeclarators = columnDeclarators;
+	}
+
 }

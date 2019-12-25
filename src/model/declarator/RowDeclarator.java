@@ -9,5 +9,13 @@ public class RowDeclarator {
 	public RowDeclarator() {
 		
 	}
+
+	public List<DeclaratorItem> getDeclaratorItems() {
+		return declaratorItems;
+	}
+
+	public void setDeclaratorItems(List<DeclaratorItem> declaratorItems) {
+		this.declaratorItems = declaratorItems;
+	}
 	
 }
