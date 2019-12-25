@@ -1,4 +1,4 @@
-package model;
+package model.main;
 
 import model.declarator_collection.ColumnDeclaratorCollection;
 import model.declarator_collection.RowDeclaratorCollection;
