@@ -1,4 +1,4 @@
-package input;
+package processing;
 
 public class PictureCreator {
 
