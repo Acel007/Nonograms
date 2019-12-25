@@ -1,4 +1,4 @@
-package declarator;
+package model.declarator;
 
 public interface Declarator {
 
