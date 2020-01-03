@@ -1,5 +1,5 @@
 package model.declarator;
 
-public interface Declarator {
+public interface Declarator{
 
 }
