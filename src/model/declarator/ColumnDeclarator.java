@@ -6,8 +6,8 @@ public class ColumnDeclarator {
 
 	private List<DeclaratorItem> declaratorItems;
 	
-	public ColumnDeclarator() {
-		
+	public ColumnDeclarator(List<DeclaratorItem> declaratorItems) {
+		this.declaratorItems = declaratorItems;
 	}
 
 	public List<DeclaratorItem> getDeclaratorItems() {
