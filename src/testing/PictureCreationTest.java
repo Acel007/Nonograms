@@ -16,8 +16,8 @@ import processing.PictureCreator;
 public class PictureCreationTest {
 	
 	private static List<String> testInput;
-	private List<List<GridItem>> testGridItems;
-	private List<List<GridItem>> comparedGridItems;
+	private PictureGrid testGrid;
+	private PictureGrid comparedGrid;
 	
 	@Before
 	public void initTestInput() {
@@ -26,12 +26,12 @@ public class PictureCreationTest {
 		testInput.add("XXXX");
 		testInput.add(" X  ");
 		testInput.add(" X  ");
-		
-		generateGridFromInput();
 	}
 	
 	@Before
-	public void initTestGrid() {
+	public void initTest() {
+		List<List<GridItem>> testGridItems = new ArrayList<>();
+		
 		//TEST CONTAINERS
 		testGridItems = new ArrayList<>();
 		
@@ -74,34 +74,14 @@ public class PictureCreationTest {
 		testGridItems.add(rowFourItems);
 		rowFourItems = null;
 		
-	}
-	
-	public void generateGridFromInput() {
-		PictureGrid comparedGrid = PictureCreator.generatePicture(testInput);
-		comparedGridItems = comparedGrid.getPictureGrid();
-	}
-
-	@Test
-	public void gridHeightEqualityTest() {
-		assertTrue(comparedGridItems.size() == testGridItems.size());
-	}
-	
-	@Test
-	public void gridLengthEqualityTest() {
-		for(int i = 0; i < testGridItems.size(); i++) {
-			assertTrue(comparedGridItems.get(i).size() == testGridItems.get(i).size());
-		}
+		testGrid = new PictureGrid(testGridItems);
+		
+		comparedGrid = PictureCreator.generatePicture(testInput);
 	}
 	
 	@Test
 	public void gridContentEqualityTest() {
-		for(int i = 0; i < testGridItems.size(); i++) {
-			List<GridItem> temp1 = testGridItems.get(i);
-			List<GridItem> temp2 = comparedGridItems.get(i);
-			for(int j = 0; j < temp1.size(); j++) {
-				assertEquals(temp1.get(j), temp2.get(j));
-			}
-		}
+		assertTrue(comparedGrid.equals(testGrid));
 	}
 
 }
